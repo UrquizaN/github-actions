@@ -86,6 +86,11 @@ jobs:
 
       - name: Run test
         run: yarn test
-
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v3
+        
+  run-code-update-coverage:
+    name: Upload coverage reports to Codecov
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    
+    steps:
+      - uses: codecov/codecov-action@v3

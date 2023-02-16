@@ -7,12 +7,12 @@ export default defineConfig({
     runMode: 2,
     openMode: 0,
   },
-  env: {
-    API_URL: "http://localhost:4000/api",
-  },
+  // env: {
+  //   API_URL: "http://localhost:4000/api",
+  // },
   e2e: {
     specPattern: "cypress/e2e/**/*.cy.{js,jsx,ts,tsx}",
-    baseUrl: "http://localhost:3000",
+    // baseUrl: "http://localhost:3000",
     setupNodeEvents(on, config) {
       return Object.assign({}, config, codeCoverageTask(on, config));
     },

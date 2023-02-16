@@ -1,9 +1,4 @@
-import { ButtonHTMLAttributes, ReactNode } from "react";
-
-interface ButtonProps {
-  children: ReactNode;
-  rest: ButtonHTMLAttributes<HTMLButtonElement>;
-}
+import { ButtonHTMLAttributes } from "react";
 
 function Button(props: ButtonHTMLAttributes<HTMLButtonElement>) {
   const { children, ...rest } = props;

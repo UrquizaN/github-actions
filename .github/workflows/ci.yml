@@ -98,7 +98,7 @@ jobs:
         run: yarn 
       - name: Running component tests
         run: |
-          cd github-actions
+          cd github-actions/github-actions
           yarn cypress run --component
       - name: Running e2e tests
         run: yarn cypress run

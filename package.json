@@ -20,6 +20,10 @@
     "start": "react-scripts -r @cypress/instrument-cra start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "yarn test --watchAll=false --collectCoverageFrom=src/**/*.ts* --collectCoverageFrom=!src/**/*.*.ts* --coverage",
+    "cy:open": "cypress open",
+    "cy:run component": "cypress run --component",
+    "cy:run": "cypress run",
     "lint": "eslint --max-warnings=0 --ext js,jsx,ts,tsx src",
     "format": "prettier --write .",
     "eject": "react-scripts eject"

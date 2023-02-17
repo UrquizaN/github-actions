@@ -4,21 +4,21 @@
     "statementMap": {
       "0": {
         "start": {
-          "line": 9,
+          "line": 4,
           "column": 32
         },
         "end": {
-          "line": 9,
+          "line": 4,
           "column": 37
         }
       },
       "1": {
         "start": {
-          "line": 11,
+          "line": 6,
           "column": 2
         },
         "end": {
-          "line": 11,
+          "line": 6,
           "column": 47
         }
       }
@@ -28,25 +28,25 @@
         "name": "Button",
         "decl": {
           "start": {
-            "line": 8,
+            "line": 3,
             "column": 9
           },
           "end": {
-            "line": 8,
+            "line": 3,
             "column": 15
           }
         },
         "loc": {
           "start": {
-            "line": 8,
+            "line": 3,
             "column": 64
           },
           "end": {
-            "line": 12,
+            "line": 7,
             "column": 1
           }
         },
-        "line": 8
+        "line": 3
       }
     },
     "branchMap": {},
@@ -59,7 +59,7 @@
     },
     "b": {},
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "7f1d0feb86ca75e752797e1c122c7a98c593fa22"
+    "hash": "7237e2aec923375cc82da79c8cd0fd2caf475a29"
   },
   "D:\\development\\cypress\\github-actions\\src\\components\\Counter\\Counter.tsx": {
     "path": "D:\\development\\cypress\\github-actions\\src\\components\\Counter\\Counter.tsx",

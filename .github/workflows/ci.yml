@@ -110,9 +110,12 @@ jobs:
         
       - name: Running component tests
         run: yarn cypress run --component
-        
+        if: ${{ success() && needs.tests.outputs.tests == 'true' }}
+
       - name: Running e2e tests
         run: yarn cypress run
+        if: ${{ success() && needs.tests.outputs.tests == 'true' }}
+
       - uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}

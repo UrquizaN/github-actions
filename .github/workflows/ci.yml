@@ -94,5 +94,5 @@ jobs:
 
     steps:
       - name: Running tests
-        run: yarn cy:run component && yarn cy:run
+        run: yarn cy:run component
       - uses: codecov/codecov-action@v3

@@ -93,6 +93,11 @@ jobs:
     timeout-minutes: 20
 
     steps:
+      - name: Install dependencies
+        run: yarn
+        
       - name: Running tests
         run: yarn cy:run component
       - uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}

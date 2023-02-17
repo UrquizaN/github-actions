@@ -96,8 +96,10 @@ jobs:
       - name: Install dependencies
         run: yarn
         
-      - name: Running tests
-        run: yarn cy:run component
+      - name: Running component tests
+        run: yarn cypress run --component
+      - name: Running component tests
+        run: yarn cypress run
       - uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}

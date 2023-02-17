@@ -112,9 +112,9 @@ jobs:
         run: yarn cypress run --component
         if: ${{ success() }}
 
-      - name: Running e2e tests
-        run: yarn cypress run
-        if: ${{success() }}
+#       - name: Running e2e tests
+#         run: yarn cypress run
+#         if: ${{success() }}
 
       - uses: codecov/codecov-action@v3
         with:

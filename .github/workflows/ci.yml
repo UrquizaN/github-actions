@@ -110,11 +110,11 @@ jobs:
        
       - name: Running component tests
         run: yarn cypress run --component
-        if: ${{ ne(github.event_name, 'pull_request') && success() && needs.tests.outputs.tests == 'true' }}
+        if: ${{ success() }}
 
       - name: Running e2e tests
         run: yarn cypress run
-        if: ${{  ne(github.event_name, 'pull_request') && success() && needs.tests.outputs.tests == 'true' }}
+        if: ${{success() }}
 
       - uses: codecov/codecov-action@v3
         with:

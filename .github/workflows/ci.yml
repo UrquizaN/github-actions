@@ -93,4 +93,6 @@ jobs:
     timeout-minutes: 20
 
     steps:
+      - name: Running tests
+        run: yarn cy:run component && yarn cy:run
       - uses: codecov/codecov-action@v3

@@ -97,7 +97,9 @@ jobs:
       - name: Install dependencies
         run: yarn 
       - name: Running component tests
-        run: yarn cypress run --component
+        run: |
+          cd github-actions
+          cypress run --component
       - name: Running e2e tests
         run: yarn cypress run
       - uses: codecov/codecov-action@v3

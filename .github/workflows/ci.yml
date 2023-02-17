@@ -91,11 +91,11 @@ jobs:
 
     steps:
       - name: Install dependencies
-        run: yarn 
+        run: npm install 
       - name: Running component tests
-        run: yarn cypress run --component
+        run: npm cypress run --component
       - name: Running e2e tests
-        run: yarn cypress run
+        run: npm cypress run
       - uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}

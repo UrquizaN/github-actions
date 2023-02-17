@@ -90,12 +90,16 @@ jobs:
     timeout-minutes: 20
 
     steps:
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+        
       - name: Install dependencies
-        run: npm install 
+        run: yarn 
       - name: Running component tests
-        run: npm cypress run --component
+        run: yarn cypress run --component
       - name: Running e2e tests
-        run: npm cypress run
+        run: yarn cypress run
       - uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}

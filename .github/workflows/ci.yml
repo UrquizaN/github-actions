@@ -107,14 +107,7 @@ jobs:
         
       - name: Install dependencies
         run: yarn 
-
-      - name: Verify if has tests on project
-        run: |
-          if [ -z "$(ls -A *.cy.{js,jsx,ts,tsx})" ]; then
-            echo "Não há testes no projeto, pulando o fluxo de trabalho"
-            exit 0
-          fi
-        
+       
       - name: Running component tests
         run: yarn cypress run --component
         if: ${{ ne(github.event_name, 'pull_request') && success() && needs.tests.outputs.tests == 'true' }}

@@ -2,9 +2,6 @@ name: Lint
 
 on: push
 
-env:
-  CODECOV_TOKEN: ${{ secrets.CODECOV }}
-
 jobs:
   run-eslint:
     name: Run eslint
@@ -94,11 +91,10 @@ jobs:
 
     steps:
       - name: Install dependencies
-        run: yarn
-        
+        run: yarn 
       - name: Running component tests
         run: yarn cypress run --component
-      - name: Running component tests
+      - name: Running e2e tests
         run: yarn cypress run
       - uses: codecov/codecov-action@v3
         with:
